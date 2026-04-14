@@ -55,7 +55,6 @@ Recommended default: 100 MB is a sensible starting point for most uses; lower it
 │   └── app.py           # Flask backend
 ├── Dockerfile           # Alpine build configuration
 ├── docker-compose.yml   # Local deployment config
-├── .gitattributes       # Enforces LF line endings for the repo
 └── README.md
 ```
 
