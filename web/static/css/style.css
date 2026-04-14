@@ -1,0 +1,140 @@
+:root {
+    --bg-primary: #f0f2f5;
+    --bg-secondary: white;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --border-color: rgba(0,0,0,0.1);
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+html.dark-mode {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --border-color: rgba(255,255,255,0.1);
+    --button-bg: #0d6efd;
+    --button-hover: #0b5ed7;
+    --shadow: 0 4px 6px rgba(255,255,255,0.05);
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.header {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.theme-toggle {
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.theme-toggle:hover {
+    background: var(--button-hover);
+}
+
+.card {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 1rem;
+}
+
+h1 {
+    margin-top: 0;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+p {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="file"] {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border: 2px dashed var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: var(--button-hover);
+}
+
+button[type="submit"] {
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background: var(--button-hover);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+.error-message {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(220, 53, 69, 0.08);
+    color: #d12b2b;
+    border: 1px solid rgba(209,43,43,0.12);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}

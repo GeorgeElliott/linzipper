@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinZipper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+    </div>
+    
+    <div class="card">
+        <h1>📦 LinZipper</h1>
+        <p>Upload a folder to create a Linux-native ZIP.</p>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file_folder" webkitdirectory directory multiple>
+            {% if error_message %}
+            <div class="error-message">{{ error_message }}</div>
+            {% endif %}
+            <div style="margin-top:0.5rem; font-size:0.9rem; color:var(--text-secondary);">Max upload: {{ max_upload_mb }} MB</div>
+            <button type="submit">Upload & Zip</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</body>
+</html>
