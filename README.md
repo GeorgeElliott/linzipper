@@ -1,4 +1,4 @@
-# LinZipper
+# LinZipper 📦🧠
 
 Is this the easiest way to zip a folder? Probably not. Is it the most reliable way to avoid Windows-induced Firefox rejection? Also probably not, but at least it works.
 
